@@ -3,9 +3,9 @@ import Comment from './comment.js';
 
 export default class CommentList extends Component {
   render() {
-    var commentNodes = this.props.data.map(function (comment) {
+    var commentNodes = this.props.data.map(function (comment, i) {
       return (
-        <Comment author={comment.author}>
+        <Comment key={i} author={comment.author}>
           {comment.text}
         </Comment>
       );

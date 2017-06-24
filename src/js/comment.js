@@ -5,7 +5,7 @@ export default class Comment extends Component {
   render() {
     var rawMarkup = marked(this.props.children.toString(), {sanitize: true});
     return (
-      <div className="comment">
+      <div className="comment, markdown-body">
         <h2 className="commentAuthor">
           {this.props.author}
         </h2>

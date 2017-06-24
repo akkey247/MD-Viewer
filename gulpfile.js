@@ -6,21 +6,24 @@ var webpackConfig = require('./webpack.config.js');
 var packager = require('electron-packager');
 
 // webpackで結合(ビルド)
-gulp.task('build', ['copy'], function(){
-  gulp.src('src/script.js')
+gulp.task('build', ['copy'], function () {
+  gulp.src('src/js/script.js')
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('build/'));
 });
 
 // webpackで結合(ビルド)
-gulp.task('copy', function(){
-  gulp.src('src/*')
+gulp.task('copy', function () {
+  gulp.src(
+    ['src/*.html', 'src/css/**'],
+    { base: 'src' }
+  )
     .pipe(gulp.dest('build/'));
 });
 
 // 自動ビルド
 gulp.task('default', function () {
-    gulp.watch('src/', ['build']);
+  gulp.watch('src/', ['build']);
 });
 
 // パッケージ作成(Windows)
