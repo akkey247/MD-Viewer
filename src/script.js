@@ -4,7 +4,7 @@ import Counter from './counter.js';
 import CommentBox from './commentbox.js';
 
 window.App = {
-  render: () => {
+  render() {
     ReactDom.render(
       <CommentBox />,
       document.getElementById('root')
