@@ -1,13 +1,15 @@
 'use strict';
 
 var gulp = require('gulp');
-var webpack = require('gulp-webpack');
+var webpack = require('webpack-stream');
+var named = require('vinyl-named');
 var webpackConfig = require('./webpack.config.js');
 var packager = require('electron-packager');
 
 // webpackで結合(ビルド)
 gulp.task('build', ['copy'], function () {
-  gulp.src('src/js/script.js')
+  gulp.src(['src/js/script.js', 'src/js/filecontroll.js'])
+    .pipe(named())
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('build/'));
 });

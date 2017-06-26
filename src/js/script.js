@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Counter from './counter.js';
-import CommentBox from './commentbox.js';
-import {data} from './data.js';
+import FileOpenButton from './fileopenbutton.js';
 
 window.App = {
   render() {
     ReactDom.render(
-      <CommentBox data={data} />,
+      <FileOpenButton />,
       document.getElementById('root')
     );
   }
