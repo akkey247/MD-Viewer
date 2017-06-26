@@ -6,7 +6,7 @@ window.App = {
   render() {
     ReactDom.render(
       <FileOpenButton />,
-      document.getElementById('root')
+      document.getElementById('contents')
     );
   }
 };

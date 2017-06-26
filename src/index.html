@@ -3,12 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>ElectronApp</title>
+  <link rel="stylesheet" href="css/cssreset-min.css">
   <link rel="stylesheet" href="css/github-markdown.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="root"></div>
+  <header id="header">
+    <dl id="title_area">
+      <dt>Title:</dt>
+      <dd id="title"></dd>
+    </dl>
+    <div id="button_area">
+      <a class="btn" type="button" id="fileSelect" href="javascript:void(0);">ファイルを開く</a>
+    </div>
+  </header>
+  <div id="contents" class="markdown-body"></div>
   <script src="filecontroll.js"></script>
-  <script src="script.js"></script>
-  <script>App.render();</script>
 </body>
 </html>
