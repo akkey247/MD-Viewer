@@ -33,7 +33,7 @@ gulp.task('package:win32', function (done) {
   packager({
     dir: './',                 // アプリケーションのパッケージとなるディレクトリ
     out: './dist',             // .app や .exeの出力先ディレクトリ
-    name: 'ElectronApp',       // アプリケーション名
+    name: 'MD-Viewer',         // アプリケーション名
     arch: 'x64',               // CPU種別. x64 or ia32
     platform: 'win32',         // OS種別. darwin or win32 or linux
     electronVersion: '1.6.11', // Electronのversion

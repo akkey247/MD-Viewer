@@ -26,7 +26,7 @@ app.on('ready', function() {
   mainWindow.loadURL('file://' + __dirname + '/build/index.html');
 
   // ChromiumのDevツールを開く
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 
   // ウィンドウが閉じられたらアプリも終了
   mainWindow.on('closed', function() {

@@ -24,7 +24,7 @@ header {
 
 #title_area dt,
 #title_area dd {
-  display: table-cell;
+  height: 25px;
   padding: 0 0 0 5px;
   color: #cccccc;
 }
