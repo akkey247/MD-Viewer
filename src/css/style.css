@@ -12,29 +12,47 @@ body {
   font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
 }
 
+#container {
+  overflow: hidden;
+  width: 100%;
+}
+
 header {
-  background-color: #333333;
+  position: relative;
   height: 60px;
-  padding: 5px;
+  width: 100%;
+  min-width: 400px;
+  overflow: hidden;
+  background-color: #333333;
 }
 
 #title_area {
-  float: left;
+  float: right;
+  width: 100%;
+  overflow: hidden;
 }
 
 #title_area dt,
 #title_area dd {
-  height: 25px;
+  height: 30px;
   padding: 0 0 0 5px;
   color: #cccccc;
 }
 
 #button_area {
+  position: absolute;
+  top: 0;
+  right: 0;
   float: right;
+  height: 60px;
+  padding: 5px;
+  background-color: #333333;
 }
 
-#contents {
-  padding: 0 5px;
+#contents_area {
+  height: calc(100vh - 60px);
+  padding: 0 5px 5px;
+  overflow: auto;
 }
 
 .btn {

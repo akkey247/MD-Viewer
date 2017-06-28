@@ -8,16 +8,20 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header id="header">
-    <dl id="title_area">
-      <dt>File Name:</dt>
-      <dd id="title"></dd>
-    </dl>
-    <div id="button_area">
-      <a class="btn" type="button" id="fileSelect" href="javascript:void(0);">ファイルを開く</a>
+  <div id="container">
+    <header id="header">
+      <dl id="title_area">
+        <dt>File Name:</dt>
+        <dd id="title"></dd>
+      </dl>
+      <div id="button_area">
+        <a class="btn" type="button" id="fileSelect" href="javascript:void(0);">ファイルを開く</a>
+      </div>
+    </header>
+    <div id="contents_area">
+      <div id="contents" class="markdown-body"></div>
     </div>
-  </header>
-  <div id="contents" class="markdown-body"></div>
+  </div>
   <script src="filecontroll.js"></script>
 </body>
 </html>
